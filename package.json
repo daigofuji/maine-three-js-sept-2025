@@ -1,22 +1,25 @@
 {
-  "name": "maine-js-lightning-talk",
-  "type": "module",
+  "name": "react-three-fiber-demo",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "npm run dev",
-    "build": "slidev build --base /maine-three-js-sept-2025/",
-    "dev": "slidev --open",
-    "export": "slidev export",
-    "deploy": "npm run build && gh-pages -d dist"
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@slidev/cli": "^52.1.0",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest",
-    "vue": "^3.5.18"
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.15.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.158.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "playwright-chromium": "^1.55.0"
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
   }
 }
