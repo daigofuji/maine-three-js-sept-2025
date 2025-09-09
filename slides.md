@@ -180,7 +180,7 @@ scene.add(ambientLight);
 renderer.render(scene, camera);
 ```
 
-[Demo](https://daigofuji.github.io/maine-three-js-sept-2025/js-demo/) [Code](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/js-demo/index.html)
+[Demo](https://daigofuji.github.io/maine-three-js-sept-2025/js-demo/) [Code](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/public/js-demo/index.html)
 
 ::right::
 **React Three Fiber:**
