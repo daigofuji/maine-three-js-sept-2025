@@ -1,45 +1,30 @@
 ---
-# You can also start simply with 'default'
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: cover2.jpg
-# some information about your slides (markdown enabled)
-title: Taming Three.js with React Three Fiber
-info: |
-  ## Maine JS Lightning Talk by Daigo Fujiwara-Smith
-  September 9, 2025
+theme: default
 
-  Learn more at [daigofuji.github.io/maine-three-js-sept-2025](https://daigofuji.github.io/maine-three-js-sept-2025/)
-# apply unocss classes to the current slide
+background: cover2.jpg
+title: Taming Three.js with React Three Fiber (R3F)
+info:  Maine JS Lightning Talk by Daigo Fujiwara-Smith, September 9, 2025
 class: text-center
-# https://sli.dev/features/drawing
-drawings:
-  persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
-mdc: true
-# open graph
+fonts:
+  sans: Hepta Slab
+  serif: Hepta Slab
 seoMeta:
-  # By default, Slidev will use ./og-image.png if it exists,
-  # or generate one from the first slide if not found.
-  # ogImage: https://cover.sli.dev
-  ogImage: auto
+  ogImage: cover2.jpg
 
 ---
 
 # Taming Three.js with React Three Fiber
 
-**Daigo Fujiwara-Smith**
+## Daigo Fujiwara-Smith
 
 Newsroom Developer, The Boston Globe
 
 Maine JS Lightning Talk - September 9, 2025
 
-Follow along at [daigofuji.github.io/maine-three-js-sept-2025](https://daigofuji.github.io/maine-three-js-sept-2025/)
+Follow along at **[daigofuji.github.io/maine-three-js-sept-2025](https://daigofuji.github.io/maine-three-js-sept-2025/)**
 
-<p class="mt-12 text-xs">Background image from by <a href="https://threejs.org/examples/#webgl_interactive_cubes_gpu">ThreeJS Example</a></p>
+<p class="mt-12 text-xs">Background image from <a href="https://threejs.org/examples/#webgl_interactive_cubes_gpu">ThreeJS Example page</a></p>
 
 ---
 layout: default
@@ -53,14 +38,14 @@ layoutClass: gap-16
 layout: two-cols
 layoutClass: gap-16
 ---
-# About me
+# About me 🙋🏻‍♂️
 
 - Daigo Fujiwara-Smith
 - The Boston Globe (Working remotely from Portland, ME)
 - Newsroom Developer
 - Originally from Japan
-- Creates interactive graphics, charts, maps, data visualizations, and builds special section websites. Helps reporters/editors with data.
-- Former Flash Developer (Seriously.)
+- Creates interactive graphics, charts, maps, data visualizations, and builds special section sites. Helps reporters/editors with data.
+- Former Macromedia/Adobe Flash Developer (Seriously.)
 
 ::right::
 <img src="/daigo.jpg" alt="daigo" class="" width="125" />
@@ -70,7 +55,7 @@ layout: image-right
 image: /three.jpg
 ---
 
-# Hitting the wall with Three.js (for me)
+# Hitting the wall with Three.js (for me) 😭
 
 - Awesome! Beautiful! [example 1](https://threejs.org/examples/#webgl_animation_keyframes) [2](https://bruno-simon.com/) [3](https://madbox.io) [4](https://threejs-journey.com/) [5](https://www.jesse-zhou.com/)
 - Don't have to write raw WebGL code!
@@ -104,7 +89,7 @@ layoutClass: gap-16
 layout: default
 ---
 
-# A Brief History of HTML `<canvas>` and WebGL
+# A Brief History of HTML `<canvas>` and WebGL 💻
 
 - 2004: Apple introduces the `<canvas>` element.
 
@@ -177,7 +162,7 @@ layout: two-cols
 layoutClass: gap-16
 ---
 
-# Code Comparison
+# Code Comparison 🤓
 
 **Vanilla Three.js:**
 ```javascript
@@ -195,6 +180,8 @@ scene.add(ambientLight);
 renderer.render(scene, camera);
 ```
 
+[Demo](https://daigofuji.github.io/maine-three-js-sept-2025/js-demo/) [Code](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/js-demo/index.html)
+
 ::right::
 **React Three Fiber:**
 ```jsx
@@ -207,16 +194,18 @@ renderer.render(scene, camera);
 </Canvas>
 ```
 
+[CodeSandbox](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/loving-hellman) 
+
 ---
 
 # Why R3F Finally Clicked
 
 - Familiar React patterns
 - Declarative approach I already knew
-- No more manual DOM manipulation
+- Modern JS/No more manual DOM manipulation
 - Component reusability
 - All React hooks are already available (e.g., useState, onClick)
-- added hooks like useFrame, useLoader, and useThree, as well as onPointerOver/onPointerOut etc.
+- added hooks like [useFrame](https://r3f.docs.pmnd.rs/api/hooks#useframe) (for animations), [useLoader](https://r3f.docs.pmnd.rs/api/hooks#useloader), and [useThree](https://r3f.docs.pmnd.rs/api/hooks#usethree), as well as [Events](https://r3f.docs.pmnd.rs/api/events) like onPointerOver/onPointerOut etc.
 - Great developer experience
 - But **there's more!** Amazing ecosystem...
 
@@ -224,7 +213,7 @@ renderer.render(scene, camera);
 layout: two-cols
 layoutClass: gap-16
 ---
-# Power of Drei (@react-three/drei)
+# Power of Drei ([@react-three/drei](https://github.com/pmndrs/drei))
 
 - A collection of useful helpers and abstractions for R3F
 - Simplifies common tasks (e.g., loading models, handling events, creating controls, animations)
@@ -234,20 +223,25 @@ layoutClass: gap-16
 ::right::
 <img src="/drei.png" alt="drei" />
 ---
-class: text-left
+layout: two-cols
+layoutClass: gap-16
 ---
 
 # Simple Demo, Conclusion & Resources
 
 ## Demo
-- [CodeSandbox Example]()
 
-- []
+- [CodeSandbox Example](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/loving-hellman)
 
-Recap: R3F makes 3D web development accessible to React developers.
+- ["Here is what I have cooked up earlier"](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/react-demo/src/AppDrei.jsx)
+
+## Recap
+
+R3F makes 3D web development accessible to React developers (like me).
 
 The Workflow: React for logic, state, and composition + Three.js for 3D power.
 
+::right::
 ## Resources
 
 - React Three Fiber Docs: [r3f.docs.pmnd.rs](https://r3f.docs.pmnd.rs/getting-started/introduction)
@@ -259,24 +253,29 @@ The Workflow: React for logic, state, and composition + Three.js for 3D power.
 - Bruno Simon's [threejs-journey.com](https://threejs-journey.com)
 
 ---
-class:  text-left
+layout: two-cols
+layoutClass: gap-16
 ---
 
-# Thank You!
-
-
+# Q&A? Thank You! 🙏
 
 ## Questions?
 
-@DaigoFuji in most social media.
+@DaigoFuji in most social media. Please reach out/keep in touch!
 
 - [GitHub](https://github.com/daigofuji)
 
 - [LinkedIn](https://www.linkedin.com/in/daigo/)
 
+- Email: daigo@daigofujiwara.com
 
-**[github.com/daigofuji/maine-three-js-sept-2025](https://github.com/daigofuji/maine-three-js-sept-2025)**
+**[github.com/daigofuji/maine-three-js-sept-2025](https://github.com/daigofuji/maine-three-js-sept-2025)** (View [source](https://github.com/daigofuji/maine-three-js-sept-2025))
 
-*Presented at Maine JS Lightning Talks*
+*Presented at [Maine JS Lightning Talks](https://www.meetup.com/mainejs/events/307703166/)*
 
 <PoweredBySlidev mt-10 />
+
+::right::
+
+<img src="/rip_flash.jpg" alt="RIP Flash" class="full-width" /> 
+<a href="https://www.deviantart.com/toonmike/art/R-I-P-Flash-866959900" class="text-xs">Image from Deviantart</a>
