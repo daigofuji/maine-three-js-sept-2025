@@ -250,7 +250,7 @@ The Workflow: React for logic, state, and composition + Three.js for 3D power.
 
 - Examples: [pmnd.rs/r3f](https://r3f.docs.pmnd.rs/getting-started/examples)
 
-- Bruno Simon's [threejs-journey.com](https://threejs-journey.com)
+- Bruno Simon's [threejs-journey.com](https://threejs-journey.com) He covers [R3F](https://threejs-journey.com/lessons/what-are-react-and-react-three-fiber) , too!
 
 ## Future?
 
