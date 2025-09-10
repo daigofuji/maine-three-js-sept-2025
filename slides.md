@@ -150,7 +150,7 @@ layoutClass: gap-16
 - **Core Idea:** It translates *declarative* JSX into *imperative* Three.js commands for you.
 - Component-based architecture
 - [Automatic cleanup](https://github.com/pmndrs/r3f-website/blob/master/src/docs/api/automatic-disposal.mdx) & lifecycle management
-- Same Three.js awesomeness, better DX (Developer Experience)
+- Same Three.js awesomeness, better DX (developer experience)
 
 ::right::
 <img src="/r3f-icon.svg" alt="r3f-logo" />
@@ -194,7 +194,7 @@ renderer.render(scene, camera);
 </Canvas>
 ```
 
-[CodeSandbox](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/silly-hopper) 
+[CodeSandbox](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/silly-hopper?file=%2Fsrc%2FApp.jsx) 
 
 ---
 
@@ -231,7 +231,7 @@ layoutClass: gap-16
 
 ## Demo
 
-- [CodeSandbox Example](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/silly-hopper)
+- [CodeSandbox Example](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/silly-hopper?file=%2Fsrc%2FApp.jsx)
 
 - ["Here is what I have cooked up earlier"](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/react-demo/src/AppDrei.jsx)
 
@@ -267,17 +267,17 @@ layoutClass: gap-16
 
 # Q&A? Thank You! 🙏
 
-## Questions?
+**[github.com/daigofuji/maine-three-js-sept-2025](https://github.com/daigofuji/maine-three-js-sept-2025)** (View [source on github](https://github.com/daigofuji/maine-three-js-sept-2025))
 
-@DaigoFuji in most social media. Please reach out/keep in touch!
+## Please reach out/keep in touch:
+
+**@DaigoFuji** in most social media.
 
 - [GitHub](https://github.com/daigofuji)
 
 - [LinkedIn](https://www.linkedin.com/in/daigo/)
 
-- Email: daigo@daigofujiwara.com
-
-**[github.com/daigofuji/maine-three-js-sept-2025](https://github.com/daigofuji/maine-three-js-sept-2025)** (View [source](https://github.com/daigofuji/maine-three-js-sept-2025))
+- Email: daigo.fujiwara@globe.com
 
 *Presented at [Maine JS Lightning Talks](https://www.meetup.com/mainejs/events/307703166/)*
 
