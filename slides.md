@@ -129,14 +129,14 @@ layoutClass: gap-16
 
 ---
 
-# Three.js Core Concepts/Minimum set up
+# Three.js (and 3D) Core Concepts and Minimum set up
 
-- **Scene**: Container for all 3D objects Your 3D world (holds objects, lights, cameras).
-- **Camera**: Viewpoint into 3D world  
+- **Canvas**: HTML element where the 3D scene is rendered (in 2D).
 - **Renderer**: Draws the 3D scene onto a `<canvas>` element.
-- **Objects & Lights**: 3D models (meshes = geometry + material) and lighting
-
-
+- **Scene**: Container for all 3D objects Your 3D world (holds objects, lights, cameras).
+- **Objects**: 3D models (meshes = geometry + material) and lighting
+- **Lights**: Necessary to see objects (types: ambient, directional, point, spot, hemisphere etc.)
+- **Camera**: Viewpoint into 3D world
 
 ---
 layout: two-cols
@@ -147,14 +147,14 @@ layoutClass: gap-16
 [pmnd.rs](https://pmnd.rs/) or Poimandres, is an open-source developer collective. They create and maintain useful tools for the React ecosystem, including React Three Fiber.
 
 - [*React renderer*](https://reactjs.org/docs/codebase-overview.html#renderers) for Three.js (not just a wrapper)
-- **Core Idea:** It translates declarative JSX into imperative Three.js commands for you.
+- **Core Idea:** It translates *declarative* JSX into *imperative* Three.js commands for you.
 - Component-based architecture
-- Automatic cleanup & lifecycle management
-- Same Three.js objects, better DX
+- [Automatic cleanup](https://github.com/pmndrs/r3f-website/blob/master/src/docs/api/automatic-disposal.mdx) & lifecycle management
+- Same Three.js awesomeness, better DX (Developer Experience)
 
 ::right::
 <img src="/r3f-icon.svg" alt="r3f-logo" />
-<!-- ## Analogy
+<!-- Analogy is:
 - Imperative = HOW (The step-by-step recipe)
 - Declarative = WHAT (The final order) -->
 ---
@@ -194,7 +194,7 @@ renderer.render(scene, camera);
 </Canvas>
 ```
 
-[CodeSandbox](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/loving-hellman) 
+[CodeSandbox](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/silly-hopper) 
 
 ---
 
@@ -231,7 +231,7 @@ layoutClass: gap-16
 
 ## Demo
 
-- [CodeSandbox Example](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/loving-hellman)
+- [CodeSandbox Example](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/silly-hopper)
 
 - ["Here is what I have cooked up earlier"](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/react-demo/src/AppDrei.jsx)
 
@@ -251,6 +251,14 @@ The Workflow: React for logic, state, and composition + Three.js for 3D power.
 - Examples: [pmnd.rs/r3f](https://r3f.docs.pmnd.rs/getting-started/examples)
 
 - Bruno Simon's [threejs-journey.com](https://threejs-journey.com)
+
+## Future?
+
+- [WebGPU API](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API) (next-gen graphics API)
+
+- [A-Frame](https://aframe.io/)
+
+- Who knows? Web3, VR/AR, Metaverse on browser?
 
 ---
 layout: two-cols
@@ -278,4 +286,4 @@ layoutClass: gap-16
 ::right::
 
 <img src="/rip_flash.jpg" alt="RIP Flash" class="full-width" /> 
-<a href="https://www.deviantart.com/toonmike/art/R-I-P-Flash-866959900" class="text-xs">Image from Deviantart</a>
+<p class="text-xs"><a href="https://www.deviantart.com/toonmike/art/R-I-P-Flash-866959900">Image from Deviantart</a> (I was going to make this a 3D scene but I ran out of time)</p>
