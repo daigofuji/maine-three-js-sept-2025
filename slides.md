@@ -24,11 +24,12 @@ Maine JS Lightning Talk - September 9, 2025
 
 Follow along at **[daigofuji.github.io/maine-three-js-sept-2025](https://daigofuji.github.io/maine-three-js-sept-2025/)**
 
+Use the arrow keys ▶️ or space bar  to navigate
+
 <p class="mt-12 text-xs">Background image from <a href="https://threejs.org/examples/#webgl_interactive_cubes_gpu">ThreeJS Example page</a></p>
 
 ---
 layout: default
-layoutClass: gap-16
 ---
 # Table of contents
 
@@ -82,6 +83,8 @@ layoutClass: gap-16
 
 - Cross-platform, royalty-free open web standard.
 
+- Khronos Group: Non-profit consortium of many companies (including Apple, Google, Microsoft, Mozilla, NVIDIA, Intel, AMD, Qualcomm, etc.)
+
 ::right::
 <img src="/webgl-logo.svg" alt="webgl-logo" class="w-full h-auto" />
 
@@ -89,7 +92,7 @@ layoutClass: gap-16
 layout: default
 ---
 
-# A Brief History of HTML `<canvas>` and WebGL 💻
+# A brief history of HTML5 `<canvas>` and WebGL 💻
 
 - 2004: Apple introduces the `<canvas>` element.
 
@@ -105,7 +108,7 @@ layout: default
 
 <p class="text-sm">SOURCES: <a href="https://architosh.com/2019/02/webgl-2-0-why-its-the-path-to-stable-open-standards-based-3d-web-graphics/">Architosh</a>, <a href="https://www.khronos.org/webgl/">Khronos Group</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">Mozilla Developer Network</a></p>
 
-<!-- Khronos group included major tech companies like Apple, Google, Microsoft, Mozilla, AMD, Intel, NVIDIA, and Qualcomm -->
+<!--  -->
 
 ---
 layout: two-cols
@@ -122,19 +125,21 @@ layoutClass: gap-16
 
 - Geometries/Materials: Predefined shapes (cubes, spheres, planes etc.) and surface appearances.
 
-- Three.js was first released by [Ricardo Cabello (Mr.doob)](https://github.com/mrdoob) in 2010(!). The code was originally developed in the ActionScript language used by Adobe Flash ([Source: Wikipedia](https://en.wikipedia.org/wiki/Three.js#History)).
+- Three.js was first released by [Ricardo Cabello (Mr.doob)](https://github.com/mrdoob) in 2010(!). The code was originally developed in [the ActionScript language](https://en.wikipedia.org/wiki/ActionScript) used by Adobe Flash ([Source: Wikipedia](https://en.wikipedia.org/wiki/Three.js#History)).
 
 ::right::
 <img src="/threejs-icon.svg" alt="threejs-icon" class="w-full h-auto" />
 
 ---
 
-# Three.js (and 3D) Core Concepts and Minimum set up
+# Three.js (and 3D) core concepts and minimum set up
 
 - **Canvas**: HTML element where the 3D scene is rendered (in 2D).
 - **Renderer**: Draws the 3D scene onto a `<canvas>` element.
-- **Scene**: Container for all 3D objects Your 3D world (holds objects, lights, cameras).
-- **Objects**: 3D models (meshes = geometry + material) and lighting
+- **Scene**: Container for all 3D objects. Your 3D world (holds objects, lights, cameras).
+- **Objects**: 3D models, meshes = geometry + material
+    - Geometry: Shape of the object (cube, sphere, cone, etc. or imported 3D model)
+    - Material: Surface appearance (color, texture, reflectivity etc.)
 - **Lights**: Necessary to see objects (types: ambient, directional, point, spot, hemisphere etc.)
 - **Camera**: Viewpoint into 3D world
 
@@ -149,7 +154,7 @@ layoutClass: gap-16
 - [*React renderer*](https://reactjs.org/docs/codebase-overview.html#renderers) for Three.js (not just a wrapper)
 - **Core Idea:** It translates *declarative* JSX into *imperative* Three.js commands for you.
 - Component-based architecture
-- [Automatic cleanup](https://github.com/pmndrs/r3f-website/blob/master/src/docs/api/automatic-disposal.mdx) & lifecycle management
+- [Automatic cleanup](https://github.com/pmndrs/r3f-website/blob/master/src/docs/api/automatic-disposal.mdx) & lifecycle management (Takes advantage of React's efficient update reconciliation process.)
 - Same Three.js awesomeness, better DX (developer experience)
 
 ::right::
@@ -162,7 +167,7 @@ layout: two-cols
 layoutClass: gap-16
 ---
 
-# Code Comparison 🤓
+# Code comparison 🤓
 
 **Vanilla Three.js:**
 ```javascript
@@ -180,7 +185,7 @@ scene.add(ambientLight);
 renderer.render(scene, camera);
 ```
 
-[Demo](https://daigofuji.github.io/maine-three-js-sept-2025/js-demo/) [Code](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/public/js-demo/index.html)
+[Demo](https://daigofuji.github.io/maine-three-js-sept-2025/js-demo/) [Code](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/public/js-demo/index.html#L17-L46)
 
 ::right::
 **React Three Fiber:**
@@ -194,17 +199,17 @@ renderer.render(scene, camera);
 </Canvas>
 ```
 
-[CodeSandbox](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/silly-hopper?file=%2Fsrc%2FApp.jsx) 
+[CodeSandbox](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/main?file=%2Fsrc%2FApp.jsx)
 
 ---
 
-# Why R3F Finally Clicked
+# Why R3F finally clicked
 
 - Familiar React patterns
 - Declarative approach I already knew
 - Modern JS/No more manual DOM manipulation
 - Component reusability
-- All React hooks are already available (e.g., useState, onClick)
+- [All React hooks](https://react.dev/reference/react/hooks) are already available (e.g., useState, onClick)
 - added hooks like [useFrame](https://r3f.docs.pmnd.rs/api/hooks#useframe) (for animations), [useLoader](https://r3f.docs.pmnd.rs/api/hooks#useloader), and [useThree](https://r3f.docs.pmnd.rs/api/hooks#usethree), as well as [Events](https://r3f.docs.pmnd.rs/api/events) like onPointerOver/onPointerOut etc.
 - Great developer experience
 - But **there's more!** Amazing ecosystem...
@@ -227,17 +232,17 @@ layout: two-cols
 layoutClass: gap-16
 ---
 
-# Simple Demo, Conclusion & Resources
+# Simple demo, recap & resources
 
 ## Demo
 
-- [CodeSandbox Example](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/draft/silly-hopper?file=%2Fsrc%2FApp.jsx)
+- [CodeSandbox Example](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/main?file=%2Fsrc%2FApp.jsx)
 
 - ["Here is what I have cooked up earlier"](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/react-demo/src/AppDrei.jsx)
 
 ## Recap
 
-R3F makes 3D web development accessible to React developers (like me).
+React Three Fiber makes 3D web development accessible to React developers (like me).
 
 The Workflow: React for logic, state, and composition + Three.js for 3D power.
 
@@ -252,7 +257,7 @@ The Workflow: React for logic, state, and composition + Three.js for 3D power.
 
 - Bruno Simon's [threejs-journey.com](https://threejs-journey.com) He covers [R3F](https://threejs-journey.com/lessons/what-are-react-and-react-three-fiber) , too!
 
-## Future?
+## What's next?
 
 - [WebGPU API](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API) (next-gen graphics API)
 
@@ -285,5 +290,5 @@ layoutClass: gap-16
 
 ::right::
 
-<img src="/rip_flash.jpg" alt="RIP Flash" class="full-width" /> 
+<img src="/rip_flash.jpg" alt="RIP Flash" class="w-full h-auto" /> 
 <p class="text-xs"><a href="https://www.deviantart.com/toonmike/art/R-I-P-Flash-866959900">Image from Deviantart</a> (I was going to make this a 3D scene but I ran out of time)</p>
