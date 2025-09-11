@@ -18,8 +18,6 @@ seoMeta:
 
 ## Daigo Fujiwara-Smith
 
-Newsroom Developer, The Boston Globe
-
 Maine JS Lightning Talk - September 9, 2025
 
 Follow along at **[daigofuji.github.io/maine-three-js-sept-2025](https://daigofuji.github.io/maine-three-js-sept-2025/)**
@@ -33,13 +31,18 @@ layout: default
 ---
 # Table of contents
 
-<Toc minDepth="1" maxDepth="1" />
+<div class="columns-2 gap-8">
+  <Toc minDepth="1" maxDepth="1" />
+</div>
 
 ---
-layout: two-cols
-layoutClass: gap-16
+layout: default
 ---
 # About me 🙋🏻‍♂️
+
+<div class="float-right w-1/3 mb-9">
+  <img src="/daigo.jpg" alt="daigo" class="block mx-auto" width="125" />
+</div>
 
 - Daigo Fujiwara-Smith
 - The Boston Globe (Working remotely from Portland, ME)
@@ -48,9 +51,6 @@ layoutClass: gap-16
 - Creates interactive graphics, charts, maps, data visualizations, and builds special section sites. Helps reporters/editors with data.
 - Former Macromedia/Adobe Flash Developer (Seriously.)
 
-::right::
-<img src="/daigo.jpg" alt="daigo" class="" width="125" />
-
 ---
 layout: image-right
 image: /three.jpg
@@ -58,7 +58,7 @@ image: /three.jpg
 
 # Hitting the wall with Three.js (for me) 😭
 
-- Awesome! Beautiful! [example 1](https://threejs.org/examples/#webgl_animation_keyframes) [2](https://bruno-simon.com/) [3](https://madbox.io) [4](https://threejs-journey.com/) [5](https://www.jesse-zhou.com/)
+- Awesome! Beautiful! [See 1](https://threejs.org/examples/#webgl_animation_keyframes), [2](https://bruno-simon.com/), [3](https://madbox.io/), [4](https://threejs-journey.com/), [5](https://www.jesse-zhou.com/)
 - Don't have to write raw WebGL code!
 
 ## ...but
@@ -69,11 +69,13 @@ image: /three.jpg
 - Hard to integrate with React apps
 
 ---
-layout: two-cols
-layoutClass: gap-16
+layout: default
 ---
-
 # What is WebGL?
+
+<div class="float-right w-1/3">
+  <img src="/webgl-logo.svg" alt="webgl-logo" class="w-full" />
+</div>
 
 [WebGL from Khronos Group](https://www.khronos.org/webgl/) makes 3D graphics possible in the browser.
 
@@ -84,9 +86,6 @@ layoutClass: gap-16
 - Cross-platform, royalty-free open web standard.
 
 - Khronos Group: Non-profit consortium of many companies (including Apple, Google, Microsoft, Mozilla, NVIDIA, Intel, AMD, Qualcomm, etc.)
-
-::right::
-<img src="/webgl-logo.svg" alt="webgl-logo" class="w-full h-auto" />
 
 ---
 layout: default
@@ -100,22 +99,25 @@ layout: default
 
 - 2009: The Khronos Group forms the WebGL working group, bringing together major tech companies to standardize the technology.
 
-- 2010: Apple's Steve Jobs publishes an open letter titled ["Thoughts on Flash"](https://web.archive.org/web/20100522002542/https://www.apple.com/hotnews/thoughts-on-flash/), advocating for open web standards like HTML5 and WebGL over proprietary plugins like Adobe Flash.
+- 2010: Apple's Steve Jobs publishes an open letter titled ["Thoughts on Flash"](https://web.archive.org/web/20100522002542/https://www.apple.com/hotnews/thoughts-on-flash/), advocating for open web standards like HTML5/WebGL over proprietary plugins like Flash.
 
 - 2011: WebGL 1.0 is released.
 
-- 2014: The HTML5 specification standardizes `<canvas>`, solidifying its role as a key part of the modern web.
+- 2014: [The HTML5 specification](https://html.spec.whatwg.org/#the-canvas-element) standardizes `<canvas>`.
 
 <p class="text-sm">SOURCES: <a href="https://architosh.com/2019/02/webgl-2-0-why-its-the-path-to-stable-open-standards-based-3d-web-graphics/">Architosh</a>, <a href="https://www.khronos.org/webgl/">Khronos Group</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">Mozilla Developer Network</a></p>
 
 <!--  -->
 
 ---
-layout: two-cols
-layoutClass: gap-16
+layout: default
 ---
 
 # Three.js TL;DR 🌟
+
+<div class="float-right">
+  <img src="/threejs-icon.svg" alt="threejs-icon" class="w-full h-auto" />
+</div>
 
 - A JavaScript library that lets you create 3D graphics in the browser using WebGL, so that no need to write raw WebGL code.
 
@@ -127,8 +129,6 @@ layoutClass: gap-16
 
 - Three.js was first released by [Ricardo Cabello (Mr.doob)](https://github.com/mrdoob) in 2010(!). The code was originally developed in [the ActionScript language](https://en.wikipedia.org/wiki/ActionScript) used by Adobe Flash ([Source: Wikipedia](https://en.wikipedia.org/wiki/Three.js#History)).
 
-::right::
-<img src="/threejs-icon.svg" alt="threejs-icon" class="w-full h-auto" />
 
 ---
 
@@ -144,10 +144,13 @@ layoutClass: gap-16
 - **Camera**: Viewpoint into 3D world
 
 ---
-layout: two-cols
-layoutClass: gap-16
+layout: default
 ---
 # Enter [React Three Fiber](https://github.com/pmndrs/react-three-fiber)
+
+<div class="float-right">
+  <img src="/r3f-icon.svg" alt="r3f-logo" class="w-full max-w-sm" />
+</div>
 
 [pmnd.rs](https://pmnd.rs/) or Poimandres, is an open-source developer collective. They create and maintain useful tools for the React ecosystem, including React Three Fiber.
 
@@ -157,8 +160,6 @@ layoutClass: gap-16
 - [Automatic cleanup](https://github.com/pmndrs/r3f-website/blob/master/src/docs/api/automatic-disposal.mdx) & lifecycle management (Takes advantage of React's efficient update reconciliation process.)
 - Same Three.js awesomeness, better DX (developer experience)
 
-::right::
-<img src="/r3f-icon.svg" alt="r3f-logo" />
 <!-- Analogy is:
 - Imperative = HOW (The step-by-step recipe)
 - Declarative = WHAT (The final order) -->
@@ -210,23 +211,24 @@ renderer.render(scene, camera);
 - Modern JS/No more manual DOM manipulation
 - Component reusability
 - [All React hooks](https://react.dev/reference/react/hooks) are already available (e.g., useState, onClick)
-- added hooks like [useFrame](https://r3f.docs.pmnd.rs/api/hooks#useframe) (for animations), [useLoader](https://r3f.docs.pmnd.rs/api/hooks#useloader), and [useThree](https://r3f.docs.pmnd.rs/api/hooks#usethree), as well as [Events](https://r3f.docs.pmnd.rs/api/events) like onPointerOver/onPointerOut etc.
+- Added hooks like [useFrame](https://r3f.docs.pmnd.rs/api/hooks#useframe) (for animations), [useLoader](https://r3f.docs.pmnd.rs/api/hooks#useloader), and [useThree](https://r3f.docs.pmnd.rs/api/hooks#usethree), as well as [Events](https://r3f.docs.pmnd.rs/api/events) like onPointerOver/onPointerOut etc.
 - Great developer experience
 - But **there's more!** Amazing ecosystem...
 
 ---
-layout: two-cols
-layoutClass: gap-16
+layout: default
 ---
 # Power of Drei ([@react-three/drei](https://github.com/pmndrs/drei))
 
-- A collection of useful helpers and abstractions for R3F
-- Simplifies common tasks (e.g., loading models, handling events, creating controls, animations)
+<div class="float-right w-1/3">
+  <img src="/drei.png" alt="drei" class="w-full h-auto ml-3" />
+</div>
+
+- A collection of useful helpers and presets for React Three Fiber
+- Simplifies common tasks (e.g., [handling events](https://drei.pmnd.rs/?path=/docs/gizmos-dragcontrols--docs), [creating controls](https://drei.pmnd.rs/?path=/docs/controls-orbitcontrols--docs), [developer helpers](https://drei.pmnd.rs/?path=/docs/gizmos-grid--docs))
 - Encourages best practices and performance optimizations
 - Easily load 3D models like GLTF formats (.glb files) using [useGLTF](https://drei.docs.pmnd.rs/loaders/gltf-use-gltf).
 - Easily make a text into 3D objects using [Text](https://drei.docs.pmnd.rs/abstractions/text) and [Text3D](https://drei.docs.pmnd.rs/abstractions/text3d)
-::right::
-<img src="/drei.png" alt="drei" />
 ---
 layout: two-cols
 layoutClass: gap-16
@@ -234,30 +236,30 @@ layoutClass: gap-16
 
 # Simple demo, recap & resources
 
-## Demo
+### Demo
 
 - [CodeSandbox Example](https://codesandbox.io/p/github/daigofuji/maine-three-js-demo/main?file=%2Fsrc%2FApp.jsx)
 
 - ["Here is what I have cooked up earlier"](https://github.com/daigofuji/maine-three-js-sept-2025/blob/main/react-demo/src/AppDrei.jsx)
 
-## Recap
+### Recap
 
-React Three Fiber makes 3D web development accessible to React developers (like me).
+**React Three Fiber** makes 3D web development accessible to React developers (like me).
 
-The Workflow: React for logic, state, and composition + Three.js for 3D power.
+The Workflow: **React** for logic, state, and composition + **Three.js** for 3D power.
 
 ::right::
-## Resources
+### Resources
 
-- React Three Fiber Docs: [r3f.docs.pmnd.rs](https://r3f.docs.pmnd.rs/getting-started/introduction)
+- React Three Fiber docs: [r3f.docs.pmnd.rs](https://r3f.docs.pmnd.rs/getting-started/introduction)
 
-- Drei Docs: [drei.pmnd.rs](https://drei.pmnd.rs)
+- Drei docs: [Getting started](https://drei.docs.pmnd.rs/getting-started/introduction), [drei.pmnd.rs](https://drei.pmnd.rs)
 
 - Examples: [pmnd.rs/r3f](https://r3f.docs.pmnd.rs/getting-started/examples)
 
-- Bruno Simon's [threejs-journey.com](https://threejs-journey.com) He covers [R3F](https://threejs-journey.com/lessons/what-are-react-and-react-three-fiber) , too!
+- Bruno Simon's [threejs-journey.com](https://threejs-journey.com). He covers [R3F](https://threejs-journey.com/lessons/what-are-react-and-react-three-fiber), too! (Some contents free)
 
-## What's next?
+### What's next?
 
 - [WebGPU API](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API) (next-gen graphics API)
 
@@ -274,7 +276,7 @@ layoutClass: gap-16
 
 **[github.com/daigofuji/maine-three-js-sept-2025](https://github.com/daigofuji/maine-three-js-sept-2025)** (View [source on github](https://github.com/daigofuji/maine-three-js-sept-2025))
 
-## Please reach out/keep in touch:
+### Please reach out/keep in touch:
 
 **@DaigoFuji** in most social media.
 
